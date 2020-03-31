@@ -1,0 +1,1 @@
+{  "name": "bulletinapi",  "version": "1.2.2",  "description": "Bulletin RESTful APIs",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2020-02-29T10:43:49.686Z",    "url": "http://apidocjs.com",    "version": "0.17.7"  }}
