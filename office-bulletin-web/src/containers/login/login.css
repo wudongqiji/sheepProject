@@ -1,0 +1,35 @@
+.loginWrapper {
+  padding-top: 90px;
+  padding-bottom: 20px; }
+  .loginWrapper .loginHolder {
+    max-width: 350px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    -moz-box-shadow: 1px 1px 7px #ccc;
+    -webkit-box-shadow: 1px 1px 7px #ccc;
+    box-shadow: 1px 1px 7px #ccc; }
+    .loginWrapper .loginHolder .contentHolder {
+      padding: 20px 20px 0px; }
+    .loginWrapper .loginHolder .btnHolder {
+      padding: 17px 20px 20px 20px;
+      font-size: 16px;
+      background-color: #f2f2f2;
+      border-top: 1px solid #dbe5e8;
+      background: repeating-linear-gradient(45deg, #e5e5e5, #e5e5e5 10px, #d6d6d6 10px, #d6d6d6 20px); }
+      .loginWrapper .loginHolder .btnHolder button {
+        display: block;
+        width: 100%; }
+  .loginWrapper p {
+    max-width: 350px;
+    margin: 0px auto;
+    margin-top: 15px;
+    text-align: center;
+    border-top: 1px solid #dddddd;
+    padding-top: 12px;
+    font-size: 11px;
+    background: url("../static/shadow.png") no-repeat 50% -3px; }
+
+@media (max-width: 600px) {
+  .loginWrapper {
+    padding-top: 20px; } }

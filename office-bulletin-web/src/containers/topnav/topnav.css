@@ -1,0 +1,38 @@
+.topNavWrapper {
+  /*box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);*/
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 10px 20px 10px 265px;
+  width: 100%;
+  /*background: url('../static/headbg2.jpg') 0px -500px #666666;*/
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 11;
+  height: 50px; }
+  .topNavWrapper a {
+    float: right;
+    margin-top: 3px;
+    margin-left: 30px;
+    display: block;
+    font-size: 16px;
+    color: #FFFFFF; }
+  .topNavWrapper a:hover {
+    color: #FFFFFF; }
+  .topNavWrapper a.toggleSideNav {
+    float: left;
+    margin-left: 0px;
+    display: none; }
+  .topNavWrapper aside {
+    display: none !important; }
+    .topNavWrapper aside nav {
+      max-width: 250px !important; }
+      .topNavWrapper aside nav h1 {
+        display: none; }
+
+@media (max-width: 768px) {
+  .topNavWrapper {
+    padding: 10px 20px; }
+    .topNavWrapper a.toggleSideNav {
+      display: block; }
+    .topNavWrapper aside {
+      display: flex !important; } }

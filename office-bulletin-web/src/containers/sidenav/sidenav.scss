@@ -1,0 +1,146 @@
+.sideNavWrapper {
+	width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #1e1e1e;
+    box-shadow: 1px 0px 20px rgba(0,0,0,0.08);
+    z-index: 12;
+
+    .profileHolder {
+    	padding: 15px 10px;
+    	background: url('../static/profilebg.jpg') #000000;
+        background-size: cover;
+        border-bottom: 1px solid #000000;
+        border-top: 1px solid #000000;
+    	overflow: hidden;
+    	position: relative;
+
+    	img {
+    		float: left;
+    		width: 35px;
+    		border-radius: 50%;
+    	}
+
+    	.details {
+    		width: 195px;
+    		margin: 0px;
+    		padding: 2px 0 0 7px;
+    		float: left;
+    		line-height: 15px;
+
+    		a.username {
+    			display: block;
+    			font-size: 13px;
+    			color: #FFFFFF;
+    			text-overflow: ellipsis;
+    			white-space: nowrap;
+				overflow: hidden;
+    		}
+
+    		p.type {
+    			font-size: 11px;
+    			color: #0f9e83;
+    			display: block;
+    			margin: 0px;
+    			padding: 0px;
+
+    			a {
+		    		float: right;
+		    		color: #FFFFFF;
+		    	}
+		    	a:hover {
+		    		color: #db2323;
+		    	}
+    		}
+    	}
+    }
+
+    .navHolder {
+        position: relative;
+
+        li {
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 1px;
+
+            a {
+                display: block;
+                padding: 15px 10px;
+                color: #e8e8e8;
+                font-size: 14px;
+                text-decoration: none;
+                background: rgba(255, 255, 255, 0.1);
+
+                i {
+                    float: left;
+                    margin-top: 0px;
+                    margin-right: 10px;
+                    font-size: 18px;
+                }
+            }            
+
+            a i:before {
+                -webkit-transition: all 0.5s; 
+                -moz-transition: all 0.5s; 
+                -ms-transition: all 0.5s; 
+                -o-transition: all 0.5s; 
+                transition: all 0.5s;
+            }
+
+            a:hover i:before {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg); 
+                -ms-transform: rotate(45deg); 
+                -o-transition: rotate(45deg); 
+                transform: rotate(45deg); 
+            }
+        }
+
+        li.label {
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-size: 11px;
+            font-weight: bold;
+            border: none;
+            padding: 20px 10px 10px;
+        }
+    }
+    li.active {
+        a {
+            color: #009E85;
+            font-weight: bold;
+        }
+    }
+
+    .copyright {
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+        font-size: 9px;
+        color: #dddddd;
+    }
+}
+
+.sideNavWrapperForce {
+    display: block !important;
+
+    .toggleSideNav {
+        overflow: hidden;
+        padding-right: 10px; 
+        
+        a {
+            float: right;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .sideNavWrapper {
+        display: none;
+    }
+
+}

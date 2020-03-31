@@ -1,0 +1,16 @@
+.music-player-panel {
+  z-index: 9999; }
+
+.closeAudio {
+  position: fixed;
+  bottom: 48px;
+  right: 7px;
+  z-index: 100;
+  font-size: 20px;
+  color: #ffffff; }
+
+.closeAudio:hover {
+  color: #ff5b5b; }
+
+.audio-lists-panel {
+  position: fixed !important; }

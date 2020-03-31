@@ -1,0 +1,11 @@
+.cardDetailsHolder {
+  background: #333333;
+  border-color: #000000; }
+  .cardDetailsHolder .ant-form-item-label label {
+    color: #FFFFFF !important; }
+  .cardDetailsHolder .ant-transfer-list-body {
+    background: #FFFFFF !important; }
+
+@media (max-width: 768px) {
+  .tableListHolder {
+    display: none; } }

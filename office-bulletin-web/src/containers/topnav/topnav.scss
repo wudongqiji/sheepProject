@@ -1,0 +1,59 @@
+.topNavWrapper {
+    /*box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 10px 20px 10px 265px;
+    width: 100%;
+    /*background: url('../static/headbg2.jpg') 0px -500px #666666;*/
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 11;
+    height: 50px;
+
+    a {
+        float: right;
+        margin-top: 3px;
+        margin-left: 30px;
+        display: block;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    a:hover {
+        color: #FFFFFF;
+    }
+
+    a.toggleSideNav {
+        float: left;
+        margin-left: 0px;
+        display: none;
+    }
+
+    aside {
+        display: none !important;
+
+        nav {
+            max-width: 250px !important;
+
+            h1 {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .topNavWrapper {      
+        padding: 10px 20px;
+
+        a.toggleSideNav {
+            display: block;
+        }
+
+        aside {
+            display: flex !important;
+        }
+    }
+
+}
+

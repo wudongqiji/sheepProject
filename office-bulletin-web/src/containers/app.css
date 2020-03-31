@@ -1,0 +1,61 @@
+.App {
+  padding: 0px;
+  margin: 0px; }
+  .App .backdropHeader {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 170px;
+    background: #000000; }
+    .App .backdropHeader .content {
+      position: relative;
+      width: 100%;
+      height: 170px; }
+      .App .backdropHeader .content canvas {
+        width: 100% !important;
+        height: 170px !important; }
+  .App .mainContent {
+    position: relative;
+    z-index: 2; }
+    .App .mainContent .mainContentWrapper {
+      padding: 0px 20px; }
+  .App .mainContentDefault {
+    padding: 70px 0 0 250px; }
+
+/* Overwrite Ant.design */
+.ant-card-head-title p {
+  margin: 0px;
+  padding: 0px;
+  color: #757575; }
+  .ant-card-head-title p span {
+    color: #0f9e83; }
+
+.ownForm .ant-form-item-label {
+  line-height: 18px !important; }
+
+.ownForm .ant-form-item-label label {
+  font-size: 12px !important; }
+
+.ownForm .ant-form-item-with-help {
+  margin-bottom: 0px !important; }
+
+.ownForm .ant-form-item {
+  margin-bottom: 19px; }
+
+.ownForm .lessMarginBtm {
+  margin-bottom: 10px !important; }
+
+.ownForm .noMarginBtm {
+  margin-bottom: 0px !important; }
+
+.animated {
+  -webkit-animation-duration: 500ms !important;
+  animation-duration: 500ms !important; }
+
+.audio-lists-panel-header h2.title span {
+  color: #FFFFFF !important; }
+
+@media (max-width: 768px) {
+  .App .mainContentDefault {
+    padding: 70px 0 0; } }

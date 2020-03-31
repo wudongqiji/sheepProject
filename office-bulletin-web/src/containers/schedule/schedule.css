@@ -1,0 +1,16 @@
+.mediaDetailsHolder {
+  margin-left: 20px;
+  -webkit-transition: width 2s;
+  /* Safari */
+  transition: width 2s; }
+  .mediaDetailsHolder .cardDetailsHolder {
+    background: #333333;
+    border-color: #000000; }
+    .mediaDetailsHolder .cardDetailsHolder .ant-form-item-label label {
+      color: #FFFFFF !important; }
+
+@media (max-width: 768px) {
+  .mediaDetailsHolder {
+    margin-left: 0px !important; }
+  .tableListHolder {
+    display: none; } }

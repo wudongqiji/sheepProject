@@ -1,0 +1,11 @@
+.ant-transfer-operation {
+  display: block !important;
+  padding: 7px 0px 5px;
+  margin: 0px auto !important;
+  text-align: center; }
+  .ant-transfer-operation .ant-btn {
+    display: inline-block !important;
+    margin: 0px 10px; }
+  .ant-transfer-operation .ant-btn .anticon-right,
+  .ant-transfer-operation .ant-btn .anticon-left {
+    display: none !important; }

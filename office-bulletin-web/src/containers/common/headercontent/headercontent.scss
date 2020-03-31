@@ -1,0 +1,32 @@
+.headerContentHolder {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+    span.title {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-right: 18px;
+    }
+
+    span.subtitle {
+    	display: block;
+    	font-size: 13px;
+    	color: #DDDDDD;
+    }
+
+    .btnHolder {
+    	float: right;
+    	padding-top: 10px;
+    }
+    .closeHolder {
+        padding-top: 4px;
+        float: right;
+        display: block;
+        font-size: 15px;
+        color: #FFFFFF;
+    }
+}

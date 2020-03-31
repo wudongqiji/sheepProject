@@ -1,0 +1,19 @@
+@import url(~antd/dist/antd.css);
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  background: #f4f4f4 url("./containers/static/bg.gif") repeat top left;
+  overflow-x: hidden; }
+
+#root {
+  width: 100%;
+  background: #f4f4f4 url("./containers/static/bg.gif") repeat top left; }
+
+@media (min-width: 600px) and (max-width: 1140px) {
+  .contentWrapper {
+    padding: 0px 10px !important; }
+  .contentWrapperNoPadding {
+    padding: 0px !important; }
+  .contentWrapperNoPaddingRight {
+    padding-right: 0px !important; } }
