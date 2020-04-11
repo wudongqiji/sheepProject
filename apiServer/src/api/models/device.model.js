@@ -34,6 +34,14 @@ const deviceSchema = new mongoose.Schema({
   status: {
     type: String,
     enum: _status,
+  },
+  activated: {
+    type: Boolean,
+    default: false,
+  },
+  activatedCode: {
+    type: String,
+    trim: true,
   }
 }, {
   timestamps: true,
@@ -86,6 +94,8 @@ deviceSchema.statics = {
         deviceSerialNum: 1,
         remark: 1,
         status: 1,
+        activated: 1,
+        activatedCode: 1,
         createdAt: 1,
         updatedAt: 1,
       },
