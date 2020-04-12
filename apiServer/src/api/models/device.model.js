@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const httpStatus = require('http-status');
 const APIError = require('../utils/APIError');
 
-const _status = ['online', 'maintenance', 'error'];
+const _status = ['online', 'maintenance', 'error', 'offline'];
 
 /**
  * Device Schema
@@ -24,6 +24,7 @@ const deviceSchema = new mongoose.Schema({
     maxlength: 128,
     index: true,
     trim: true,
+    unique: true,
   },
   remark: {
     type: String,
@@ -34,6 +35,7 @@ const deviceSchema = new mongoose.Schema({
   status: {
     type: String,
     enum: _status,
+    default: 'offline',
   },
   activated: {
     type: Boolean,
@@ -72,7 +74,23 @@ deviceSchema.statics = {
     }
 
   },
-  list({page = null, perPage = null, status = null, branchId = null}, query) {
+  checkDuplicateDeviceSerialNum(error) {
+    if (error.name === 'MongoError' && error.code === 11000) {
+      return new APIError({
+        message: 'Validation Error',
+        errors: [{
+          field: 'deviceSerialNum',
+          location: 'body',
+          messages: ['"deviceSerialNum" already exists'],
+        }],
+        status: httpStatus.CONFLICT,
+        isPublic: true,
+        stack: error.stack,
+      });
+    }
+    return error;
+  },
+  list({page = null, perPage = null, status = null, branchId = null, activated = null}, query) {
     const options = [];
     if(query){
       options.push({
@@ -85,6 +103,30 @@ deviceSchema.statics = {
         createdAt: -1,
       }
     });
+
+    if (status) {
+      options.push({
+        $match: {
+            'status': status
+        }
+      });
+    }
+
+    if (branchId) {
+      options.push({
+        $match: {
+          'branchId': branchId
+        }
+      });
+    }
+
+    if (activated !== null) {
+      options.push({
+        $match: {
+          'activated': activated
+        }
+      });
+    }
 
     options.push({
       $project: {
@@ -108,22 +150,6 @@ deviceSchema.statics = {
         results: { $push: '$$ROOT' },
       },
     });
-
-    if (status) {
-      options.push({
-        $match: {
-            'status': status
-        }
-      });
-    }
-
-    if (branchId) {
-      options.push({
-        $match: {
-          'branchId': branchId
-        }
-      });
-    }
 
     if (page && perPage) {
       options.push({

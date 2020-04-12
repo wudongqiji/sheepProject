@@ -6,6 +6,8 @@ const roomRoutes = require('./room.route');
 const displayRoutes = require('./display.route');
 const mediaRoutes = require('./media.route');
 const companyRoutes = require('./company.route');
+const deviceRoutes = require('./device.route');
+const branchRoutes = require('./branch.route');
 
 const router = express.Router();
 
@@ -26,5 +28,7 @@ router.use('/room', roomRoutes);
 router.use('/display', displayRoutes);
 router.use('/media', mediaRoutes);
 router.use('/company', companyRoutes);
+router.use('/device', deviceRoutes);
+router.use('/branch', branchRoutes);
 
 module.exports = router;

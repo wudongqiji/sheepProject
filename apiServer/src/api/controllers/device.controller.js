@@ -20,7 +20,7 @@ exports.load = async (req, res, next, id) => {
  */
 exports.get = async (req, res, next) => {
   try {
-    const device = req.locals.device.transform();
+    const device = req.locals;
     res.json(device);
   } catch (error) {
     next(error);
@@ -60,12 +60,25 @@ exports.list = async (req, res, next) => {
     device[0].page = req.query.page;
     device[0].perPage = req.query.perPage;
     const results = device[0];
+    delete results._id;
 
     res.json(results);
   } catch (error) {
     next(error);
   }
 };
+
+/**
+ * Update device
+ */
+exports.update = async (req, res, next) => {
+  const updatedDevice = req.body;
+  const device = Object.assign(req.locals.device, updatedDevice);
+
+  device.save()
+    .then(savedDevice => res.json(savedDevice))
+    .catch(e => next(e));
+}
 
 /**
  * Delete device

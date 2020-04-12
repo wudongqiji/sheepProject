@@ -63,6 +63,22 @@ const branchSchema = new mongoose.Schema({
 });
 
 /**
+ * Methods
+ */
+branchSchema.method({
+  transform() {
+    let transformed = {};
+    const fields = ['_id', 'name', 'district', 'location', 'createdAt'];
+
+    fields.forEach((field) => {
+      transformed[field] = this[field];
+    });
+
+    return transformed;
+  },
+});
+
+/**
  * Statics
  */
 branchSchema.statics = {
